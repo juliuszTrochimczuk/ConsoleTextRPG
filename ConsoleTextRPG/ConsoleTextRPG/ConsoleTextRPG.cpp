@@ -1,6 +1,12 @@
 ﻿#include <iostream>
+#include <string>
+#include "Foe.h"
+
+using namespace std;
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    cout << "Hello World!\n";
+    Foe wolf = Foe("Wolf");
+    wolf.SayHey();
 }
