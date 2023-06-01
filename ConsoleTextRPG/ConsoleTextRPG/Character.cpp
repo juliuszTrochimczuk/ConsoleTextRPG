@@ -7,6 +7,19 @@ int Character::DrawNumber(int min, int max)
 	return randomNumber;
 }
 
+bool Character::CanBlock()
+{
+	int blockChance = DrawNumber(1, 100);
+	if (blockChance >= defensiveFactor)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+
 int Character::Attack(int minDamage, int maxDamage)
 {
 	int damage = DrawNumber(minDamage, maxDamage);
@@ -15,6 +28,11 @@ int Character::Attack(int minDamage, int maxDamage)
 
 void Character::TakeDamage(int damage)
 {
+	if (CanBlock())
+	{
+		cout << "I've blocked your attack\n";
+		return;
+	}
 	health -= damage;
 	if (health <= 0)
 	{
@@ -24,4 +42,5 @@ void Character::TakeDamage(int damage)
 
 void Character::Death()
 {
+	isDead = true;
 }

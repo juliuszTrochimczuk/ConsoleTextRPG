@@ -7,7 +7,7 @@ using namespace std;
 int main()
 {
     cout << "Hello World!\n";
-    Foe wolf = Foe("Wolf", 10);
+    Foe wolf = Foe("Wolf", 10, 60);
     wolf.DrawAction();
     wolf.TakeDamage(20);
 }

@@ -7,7 +7,7 @@ using namespace std;
 class Foe : public Character
 {
 public:
-	Foe(string _name, int _health);
+	Foe(string _name, int _health, int defensive);
 	void Death() override;
 	void DrawAction();
 };
