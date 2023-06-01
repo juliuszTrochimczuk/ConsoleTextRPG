@@ -1,3 +1,13 @@
 ﻿  Character.cpp
 C:\Users\Juliusz Trochimczuk\ConsoleTextRPG\ConsoleTextRPG\ConsoleTextRPG\Character.h(1,10): warning C4067: nieoczekiwane tokeny występujące po dyrektywie preprocesora - oczekiwano nowego wiersza
+C:\Users\Juliusz Trochimczuk\ConsoleTextRPG\ConsoleTextRPG\ConsoleTextRPG\Character.h(2,10): warning C4067: nieoczekiwane tokeny występujące po dyrektywie preprocesora - oczekiwano nowego wiersza
+C:\Users\Juliusz Trochimczuk\ConsoleTextRPG\ConsoleTextRPG\ConsoleTextRPG\Character.cpp(5,12): warning C4244: "argument": konwersja z "time_t" do "unsigned int", możliwa utrata danych
+  ConsoleTextRPG.cpp
+C:\Users\Juliusz Trochimczuk\ConsoleTextRPG\ConsoleTextRPG\ConsoleTextRPG\Character.h(1,10): warning C4067: nieoczekiwane tokeny występujące po dyrektywie preprocesora - oczekiwano nowego wiersza
+C:\Users\Juliusz Trochimczuk\ConsoleTextRPG\ConsoleTextRPG\ConsoleTextRPG\Character.h(2,10): warning C4067: nieoczekiwane tokeny występujące po dyrektywie preprocesora - oczekiwano nowego wiersza
+  Foe.cpp
+C:\Users\Juliusz Trochimczuk\ConsoleTextRPG\ConsoleTextRPG\ConsoleTextRPG\Character.h(1,10): warning C4067: nieoczekiwane tokeny występujące po dyrektywie preprocesora - oczekiwano nowego wiersza
+C:\Users\Juliusz Trochimczuk\ConsoleTextRPG\ConsoleTextRPG\ConsoleTextRPG\Character.h(2,10): warning C4067: nieoczekiwane tokeny występujące po dyrektywie preprocesora - oczekiwano nowego wiersza
+C:\Users\Juliusz Trochimczuk\ConsoleTextRPG\ConsoleTextRPG\ConsoleTextRPG\Foe.cpp(17,12): warning C4244: "argument": konwersja z "time_t" do "unsigned int", możliwa utrata danych
+  Generowanie kodu...
   ConsoleTextRPG.vcxproj -> C:\Users\Juliusz Trochimczuk\ConsoleTextRPG\ConsoleTextRPG\Debug\ConsoleTextRPG.exe
