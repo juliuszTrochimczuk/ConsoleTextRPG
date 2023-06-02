@@ -12,8 +12,8 @@ protected:
 	int health;
 	int defensiveFactor;
 	int DrawNumber(int min, int max);
+	virtual string BlockCommunicate();
 public:
-	string name;
 	bool isDead;
 	int Attack(int minDamage, int maxDamage);
 	void TakeDamage(int damage);

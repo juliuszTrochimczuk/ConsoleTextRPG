@@ -1,5 +1,9 @@
 #include "Foe.h"
-#include <cstdlib>
+
+string Foe::BlockCommunicate()
+{
+	return name + " has blocked your attack";
+}
 
 Foe::Foe(string _name, int _health, int defensive)
 {
@@ -10,20 +14,23 @@ Foe::Foe(string _name, int _health, int defensive)
 
 void Foe::Death()
 {
-	cout << "I've died :(";
+	isDead = true;
+	cout << name + " has died\n";
 }
 
-void Foe::DrawAction()
+int Foe::DrawAction()
 {
 	int actionToPerform = DrawNumber(1, 2);
+	int damage = 0;
 	if (actionToPerform == 1)
 	{
-		int damage = Attack(10, 15);
+		damage = Attack(10, 15);
 		cout << "Basic Attack: " + to_string(damage) + "\n";
 	}
 	else if (actionToPerform == 2)
 	{
-		int damage = Attack(8, 25);
+		damage = Attack(8, 25);
 		cout << "Power Attack: " + to_string(damage) + "\n";
 	}
+	return damage;
 }

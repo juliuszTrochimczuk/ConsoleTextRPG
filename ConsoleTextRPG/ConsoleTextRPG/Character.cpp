@@ -7,6 +7,11 @@ int Character::DrawNumber(int min, int max)
 	return randomNumber;
 }
 
+string Character::BlockCommunicate()
+{
+	return string();
+}
+
 bool Character::CanBlock()
 {
 	int blockChance = DrawNumber(1, 100);
@@ -30,7 +35,7 @@ void Character::TakeDamage(int damage)
 {
 	if (CanBlock())
 	{
-		cout << "I've blocked your attack\n";
+		cout << BlockCommunicate() << endl;
 		return;
 	}
 	health -= damage;
@@ -42,5 +47,4 @@ void Character::TakeDamage(int damage)
 
 void Character::Death()
 {
-	isDead = true;
 }
