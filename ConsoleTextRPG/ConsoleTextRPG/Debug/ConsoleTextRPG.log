@@ -1,11 +1,4 @@
 ﻿  ConsoleTextRPG.cpp
 C:\Users\Juliusz Trochimczuk\ConsoleTextRPG\ConsoleTextRPG\ConsoleTextRPG\Character.h(1,10): warning C4067: nieoczekiwane tokeny występujące po dyrektywie preprocesora - oczekiwano nowego wiersza
 C:\Users\Juliusz Trochimczuk\ConsoleTextRPG\ConsoleTextRPG\ConsoleTextRPG\Character.h(2,10): warning C4067: nieoczekiwane tokeny występujące po dyrektywie preprocesora - oczekiwano nowego wiersza
-  Player.cpp
-C:\Users\Juliusz Trochimczuk\ConsoleTextRPG\ConsoleTextRPG\ConsoleTextRPG\Character.h(1,10): warning C4067: nieoczekiwane tokeny występujące po dyrektywie preprocesora - oczekiwano nowego wiersza
-C:\Users\Juliusz Trochimczuk\ConsoleTextRPG\ConsoleTextRPG\ConsoleTextRPG\Character.h(2,10): warning C4067: nieoczekiwane tokeny występujące po dyrektywie preprocesora - oczekiwano nowego wiersza
-  Warrior.cpp
-C:\Users\Juliusz Trochimczuk\ConsoleTextRPG\ConsoleTextRPG\ConsoleTextRPG\Character.h(1,10): warning C4067: nieoczekiwane tokeny występujące po dyrektywie preprocesora - oczekiwano nowego wiersza
-C:\Users\Juliusz Trochimczuk\ConsoleTextRPG\ConsoleTextRPG\ConsoleTextRPG\Character.h(2,10): warning C4067: nieoczekiwane tokeny występujące po dyrektywie preprocesora - oczekiwano nowego wiersza
-  Generowanie kodu...
   ConsoleTextRPG.vcxproj -> C:\Users\Juliusz Trochimczuk\ConsoleTextRPG\ConsoleTextRPG\Debug\ConsoleTextRPG.exe

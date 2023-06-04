@@ -20,17 +20,20 @@ void Foe::Death()
 
 int Foe::DrawAction()
 {
-	int actionToPerform = DrawNumber(1, 2);
+	cout << name + " has health: " + to_string(health) << endl;
+	int actionToPerform = GameController::GenerateNumber(1, 2);
 	int damage = 0;
+	cout << name + " is making: ";
 	if (actionToPerform == 1)
 	{
 		damage = Attack(10, 15);
-		cout << "Basic Attack: " + to_string(damage) + "\n";
+		cout << "Basic Attack: ";
 	}
 	else if (actionToPerform == 2)
 	{
 		damage = Attack(8, 25);
-		cout << "Power Attack: " + to_string(damage) + "\n";
+		cout << "Power Attack: ";
 	}
+	cout << to_string(damage) << endl;
 	return damage;
 }

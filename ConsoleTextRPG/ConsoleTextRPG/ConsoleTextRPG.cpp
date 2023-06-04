@@ -3,30 +3,41 @@
 #include "Foe.h"
 #include "Warrior.h"
 #include "Player.h"
+#include "GameController.h"
 
 using namespace std;
 
-void FightSystem(Player& playerRef, Foe& oponentRef)
+void RewardingPlayer(Player& playerRef)
 {
-    while (playerRef.isDead != true && oponentRef.isDead != true)
+    cout << playerRef.isDead << endl;
+    cout << "Here comes the award :D\n";
+    return;
+}
+
+void FightSystem(Player& playerRef)
+{
+    Foe oponent = Foe("Wolf", 100, 60);
+    while (playerRef.isDead != true && oponent.isDead != true)
     {
         int damageToOponent = playerRef.MakeAction();
-        oponentRef.TakeDamage(damageToOponent);
-        if (oponentRef.isDead == true)
+        oponent.TakeDamage(damageToOponent);
+        if (oponent.isDead == true)
         {
-            cout << "Here comes the award :D\n";
-            break;
+            cout << endl;
+            RewardingPlayer(playerRef);
+            return;
         }
-        int damageToPlayer = oponentRef.DrawAction();
+        int damageToPlayer = oponent.DrawAction();
         playerRef.TakeDamage(damageToPlayer);
+        cout << endl;
     }
 }
 
 int main()
 {
-    cout << "Hey Player! Welcome in magical world of Rivia. It's high fanatsy world with planty of stories, creaters and treasuer. But firstly you need to choose your character.\n";
-    Warrior playerObject = Warrior();
-    Foe wolf = Foe("Wolf", 10, 60);
-    cout << "And here is your first creaters to kill. You encounter: " + wolf.name << endl;
-    FightSystem(playerObject, wolf);
+   cout << "Hey Player! Welcome in magical world of Rivia. It's high fanatsy world with planty of stories, creaters and treasuer. But firstly you need to choose your character.\n";
+   Warrior playerObject = Warrior();
+   cout << "And here is your first creaters to kill. You encounter: Wolf\n";
+   FightSystem(playerObject);
+   cout << "Congratiulations on killing your first beast\n";
 }

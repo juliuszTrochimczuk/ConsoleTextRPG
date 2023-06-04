@@ -1,5 +1,6 @@
 #include <iostream>;
 #include <string>;
+#include "GameController.h"
 
 using namespace std;
 
@@ -11,7 +12,6 @@ private:
 protected:
 	int health;
 	int defensiveFactor;
-	int DrawNumber(int min, int max);
 	virtual string BlockCommunicate();
 public:
 	bool isDead;
