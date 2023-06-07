@@ -1,3 +1,3 @@
 # ConsoleTextRPG
 
-Console text game rpg written in C++ 
+ONGOING Console text game rpg written in C++ 
