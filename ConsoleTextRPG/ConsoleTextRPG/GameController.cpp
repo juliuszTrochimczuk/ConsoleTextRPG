@@ -19,3 +19,32 @@ FeoData GameController::GetOponentData(string oponentName)
 	cout << "DOSEN'T FIND ENEMY: " + oponentName << endl;
 	exit(0);
 }
+
+int GameController::HandleInputChoice(int maxOption)
+{
+	string typedOption;
+	int numericOption;
+	cin >> typedOption;
+	while (true)
+	{
+		try
+		{
+			numericOption = stoi(typedOption);
+			if (numericOption != 0 && numericOption <= maxOption)
+			{
+				break;
+			}
+			else
+			{
+				cout << "Wrong option. Please type again.\n";
+				cin >> typedOption;
+			}
+		}
+		catch (exception ex)
+		{
+			cout << "Wrong option. Please type again.\n";
+			cin >> typedOption;
+		}
+	}
+	return numericOption;
+}

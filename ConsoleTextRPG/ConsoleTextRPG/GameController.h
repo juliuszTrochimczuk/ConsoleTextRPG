@@ -1,5 +1,6 @@
 #include <iostream>
 #include <random>
+#include <string>
 #include "FeoData.cpp"
 
 using namespace std;
@@ -14,5 +15,6 @@ class GameController
 public:
 	static int GenerateNumber(int minValue, int maxValue);
 	static FeoData GetOponentData(string oponentName);
+	static int HandleInputChoice(int maxOption);
 };
 

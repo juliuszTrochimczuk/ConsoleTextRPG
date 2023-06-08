@@ -9,9 +9,8 @@ using namespace std;
 
 void RewardingPlayer(Player& playerRef)
 {
-    int choseReward = 0;
     cout << "Choose your reward: 1 - Healing; 2 - Gold\n";
-    cin >> choseReward;
+    int choseReward = GameController::HandleInputChoice(2);
     if (choseReward == 1)
     {
         int healingAmount = GameController::GenerateNumber(10, 25);

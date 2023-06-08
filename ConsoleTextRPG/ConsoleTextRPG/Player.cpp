@@ -30,9 +30,8 @@ int Player::MakeAction()
 {
     cout << "Your's health: " + to_string(health) << endl;
     cout << "It's your turn: " + ActionCommunicate() << endl;
-    int choiceMake;
+    int choiceMake = GameController::HandleInputChoice(2);
     int damage;
-    cin >> choiceMake;
     if (choiceMake == 1)
     {
         damage = BasicAttack();
