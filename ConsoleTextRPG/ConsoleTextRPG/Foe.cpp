@@ -5,11 +5,15 @@ string Foe::BlockCommunicate()
 	return name + " has blocked your attack";
 }
 
-Foe::Foe(string _name, int _health, int defensive)
+Foe::Foe(FeoData data)
 {
-	name = _name;
-	health = _health;
-	defensiveFactor = defensive;
+	name = data.name;
+	health = data.health;
+	defensiveFactor = data.defensive;
+	minBaseAttack = data.minBaseAttack;
+	maxBaseAttack = data.maxBaseAttack;
+	minPowerAttack = data.minPowerAttack;
+	maxPowerAttack = data.maxPowerAttack;
 }
 
 void Foe::Death()
@@ -26,12 +30,12 @@ int Foe::DrawAction()
 	cout << name + " is making: ";
 	if (actionToPerform == 1)
 	{
-		damage = Attack(10, 15);
+		damage = Attack(minBaseAttack, maxBaseAttack);
 		cout << "Basic Attack: ";
 	}
 	else if (actionToPerform == 2)
 	{
-		damage = Attack(8, 25);
+		damage = Attack(minPowerAttack, maxPowerAttack);
 		cout << "Power Attack: ";
 	}
 	cout << to_string(damage) << endl;

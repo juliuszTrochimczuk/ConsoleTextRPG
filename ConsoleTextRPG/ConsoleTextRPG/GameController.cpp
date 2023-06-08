@@ -4,9 +4,18 @@ int GameController::GenerateNumber(int minValue, int maxValue)
 {
 	random_device rd;
 	uniform_int_distribution<int> dist(minValue, maxValue);
-
-	//int random_die_roll = dist(rd);
-	//srand(time(NULL));
-	//int randomNumber = rand() % (maxValue - minValue + 1) + minValue;
 	return dist(rd);
+}
+
+FeoData GameController::GetOponentData(string oponentName)
+{
+	for (int i = 0; i < sizeof(oponentsData); i++)
+	{
+		if (oponentsData[i].name == oponentName)
+		{
+			return oponentsData[i];
+		}
+	}
+	cout << "DOSEN'T FIND ENEMY\n";
+	exit(0);
 }

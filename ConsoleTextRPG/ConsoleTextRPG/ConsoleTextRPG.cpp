@@ -14,9 +14,10 @@ void RewardingPlayer(Player& playerRef)
     return;
 }
 
-void FightSystem(Player& playerRef)
+void FightSystem(Player& playerRef, string oponentName)
 {
-    Foe oponent = Foe("Wolf", 100, 60);
+    
+    Foe oponent = Foe(GameController::GetOponentData(oponentName));
     while (playerRef.isDead != true && oponent.isDead != true)
     {
         int damageToOponent = playerRef.MakeAction();
@@ -38,6 +39,6 @@ int main()
    cout << "Hey Player! Welcome in magical world of Rivia. It's high fanatsy world with planty of stories, creaters and treasuer. But firstly you need to choose your character.\n";
    Warrior playerObject = Warrior();
    cout << "And here is your first creaters to kill. You encounter: Wolf\n";
-   FightSystem(playerObject);
+   FightSystem(playerObject, "Wolf");
    cout << "Congratiulations on killing your first beast\n";
 }

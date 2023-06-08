@@ -1,18 +1,23 @@
 #include <iostream>
 #include <cstdlib>
 #include "Character.h"
+#include "FeoData.cpp"
 
 using namespace std;
 
 #pragma once
 class Foe : public Character
 {
+private:
+	int minBaseAttack;
+	int maxBaseAttack;
+	int minPowerAttack;
+	int maxPowerAttack;
 protected:
 	string BlockCommunicate() override;
 public:
 	string name;
-	Foe(string _name, int _health, int defensive);
+	Foe(FeoData data);
 	void Death() override;
 	int DrawAction();
 };
-
