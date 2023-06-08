@@ -16,6 +16,6 @@ FeoData GameController::GetOponentData(string oponentName)
 			return oponentsData[i];
 		}
 	}
-	cout << "DOSEN'T FIND ENEMY\n";
+	cout << "DOSEN'T FIND ENEMY: " + oponentName << endl;
 	exit(0);
 }

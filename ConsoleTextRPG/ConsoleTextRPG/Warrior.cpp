@@ -17,6 +17,6 @@ int Warrior::PowerAttack()
 
 Warrior::Warrior()
 {
-	health = 125;
+	SetupHealth(125);
 	defensiveFactor = 56;
 }

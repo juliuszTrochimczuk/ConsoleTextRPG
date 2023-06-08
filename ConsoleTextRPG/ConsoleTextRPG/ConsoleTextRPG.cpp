@@ -9,14 +9,26 @@ using namespace std;
 
 void RewardingPlayer(Player& playerRef)
 {
-    cout << playerRef.isDead << endl;
-    cout << "Here comes the award :D\n";
+    int drawReward = GameController::GenerateNumber(1, 2);
+    if (drawReward == 1)
+    {
+        int healingAmount = GameController::GenerateNumber(10, 25);
+        cout << "Near the corpse you find the flask of life energy. It restoring " + to_string(healingAmount) + " of your health\n";
+        playerRef.Heal(healingAmount);
+        cout << "Now your healt amount is: " + to_string(playerRef.GetHealth()) << endl;
+    }
+    else if (drawReward == 2)
+    {
+        int goldLooted = GameController::GenerateNumber(5, 15);
+        cout << "Near the corpse you find the pouch of gold. You decide to take it. Owner dosen't need it now anyway. You recive " + to_string(goldLooted) + " gold\n";
+        playerRef.Loot(goldLooted);
+        cout << "Now you have " + to_string(playerRef.GetGold()) + " gold\n";
+    }
     return;
 }
 
 void FightSystem(Player& playerRef, string oponentName)
 {
-    
     Foe oponent = Foe(GameController::GetOponentData(oponentName));
     while (playerRef.isDead != true && oponent.isDead != true)
     {

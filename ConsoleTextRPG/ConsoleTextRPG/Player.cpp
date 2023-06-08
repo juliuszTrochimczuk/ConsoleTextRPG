@@ -1,5 +1,11 @@
 #include "Player.h"
 
+void Player::SetupHealth(int amount)
+{
+    maxHealth = amount;
+    health = maxHealth;
+}
+
 string Player::ActionCommunicate()
 {
     return "Test123";
@@ -44,8 +50,28 @@ int Player::GetHealth()
     return health;
 }
 
+int Player::GetGold()
+{
+    return gold;
+}
+
 void Player::Death()
 {
-    cout << "Your journey ends here\n";
+    cout << endl;
+    cout << "Your journey ends here... During your travel you've collected: " + to_string(gold) + " gold\n";
     exit(0);
+}
+
+void Player::Heal(int amount)
+{
+    health += amount;
+    if (health > maxHealth)
+    {
+        health = maxHealth;
+    }
+}
+
+void Player::Loot(int amount)
+{
+    gold += amount;
 }
