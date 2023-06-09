@@ -2,6 +2,8 @@
 #include <string>
 #include "Foe.h"
 #include "Warrior.h"
+#include "Hunter.h"
+#include "Mage.h"
 #include "Player.h"
 #include "GameController.h"
 
@@ -48,12 +50,32 @@ void FightSystem(Player& playerRef, string oponentName)
     }
 }
 
+void StartOfTheGame(Player &playerRef)
+{
+    cout << "And here is your first creaters to kill. You encounter: Wolf\n";
+    FightSystem(playerRef, "Wolf");
+    FightSystem(playerRef, "Wolf");
+    cout << "Congratiulations on killing your first beast\n";
+}
+
 int main()
 {
    cout << "Hey Player! Welcome in magical world of Rivia. It's high fanatsy world with planty of stories, creaters and treasuer. But firstly you need to choose your character.\n";
-   Warrior playerObject = Warrior();
-   cout << "And here is your first creaters to kill. You encounter: Wolf\n";
-   FightSystem(playerObject, "Wolf");
-   FightSystem(playerObject, "Wolf");
-   cout << "Congratiulations on killing your first beast\n";
+   cout << "1 - Warrior; 2 - Hunter; 3 - Mage\n";
+   int classChoice = GameController::HandleInputChoice(3);
+   if (classChoice == 1)
+   {
+       Warrior playerObject = Warrior();
+       StartOfTheGame(playerObject);
+   }
+   else if (classChoice == 2)
+   {
+       Hunter playerObject = Hunter();
+       StartOfTheGame(playerObject);
+   }
+   else if (classChoice == 3)
+   {
+       Mage playerObject = Mage();
+       StartOfTheGame(playerObject);
+   }   
 }

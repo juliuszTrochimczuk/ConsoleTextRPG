@@ -144,6 +144,8 @@
     <ClCompile Include="FeoData.cpp" />
     <ClCompile Include="Foe.cpp" />
     <ClCompile Include="GameController.cpp" />
+    <ClCompile Include="Hunter.cpp" />
+    <ClCompile Include="Mage.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Warrior.cpp" />
   </ItemGroup>
@@ -151,6 +153,8 @@
     <ClInclude Include="Character.h" />
     <ClInclude Include="Foe.h" />
     <ClInclude Include="GameController.h" />
+    <ClInclude Include="Hunter.h" />
+    <ClInclude Include="Mage.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="Warrior.h" />
   </ItemGroup>
