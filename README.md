@@ -11,8 +11,8 @@ Slay beast and monsters, collect gold and discover new world in this exiting gam
 ### Some technical information
 
 This game is written in pure C++ (without using any framework) and it runs throw terminal. <br />
-I've used the OOP patern to create main backbone character script and all of other components, such as Player character, oponents, is using this skeleton. <br />
-I've also created the GameController class as a pack of static methods to handle universal things between all coponents in the game. Such as: player inputs (check if player is typing correct choice), random number generator, and getting oponents data from static list of oponents - each oponent is just a struct data which I Get from list and them send the data to constructor of Feo class.
+I've used the OOP patern to create main backbone character script (Character.cpp). All of other components, such as Player character, oponents, is child of Character.cpp which allows me not to repate the same code over and over (block mechanic, taking damage, etc.). <br />
+I've also created the GameController class as a pack of static methods to handle universal things between all coponents in the game. Such as: player inputs (check if player is typing correct choice), random number generator, and getting oponents data from static list of oponents - each oponent is just a struct data which I get from list and them send the data to constructor of Feo class.
 
 ### Plans to do
 
