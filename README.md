@@ -16,4 +16,4 @@ I've also created the GameController class as a pack of static methods to handle
 
 ### Plans to do
 
-What I don't have now, is the story system. I want to have all my texts in txt file and then get the right one by it's id. This is high version of this. Still need to figure out how to implemnent this and maybe change some details.
+What I don't have now, is the story system. I want to have all my story texts in txt file and then get the right one by it's id. This is high design version of this. Still need to figure out how to implemnent and maybe change some details.
