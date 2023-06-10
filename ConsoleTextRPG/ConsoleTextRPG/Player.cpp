@@ -26,12 +26,30 @@ int Player::PowerAttack()
     return 0;
 }
 
+int Player::SpecialAttack()
+{
+    return 0;
+}
+
+void Player::DoBeforeAction()
+{
+}
+
 int Player::MakeAction()
 {
     cout << "Your's health: " + to_string(health) << endl;
     cout << "It's your turn: " + ActionCommunicate() << endl;
-    int choiceMake = GameController::HandleInputChoice(2);
-    int damage;
+    DoBeforeAction();
+    int choiceMake = 0;
+    if (haveSpecialAttack == true)
+    {
+        choiceMake = GameController::HandleInputChoice(3);
+    }
+    else
+    {
+        choiceMake = GameController::HandleInputChoice(2);
+    }
+    int damage = -1;
     if (choiceMake == 1)
     {
         damage = BasicAttack();
@@ -39,6 +57,10 @@ int Player::MakeAction()
     else if (choiceMake == 2)
     {
         damage = PowerAttack();
+    }
+    else if (choiceMake == 3)
+    {
+        damage = SpecialAttack();
     }
     cout << "Your attack has made: " + to_string(damage) << endl;
     return damage;

@@ -26,7 +26,7 @@ int Character::Attack(int minDamage, int maxDamage)
 
 void Character::TakeDamage(int damage)
 {
-	if (CanBlock())
+	if (CanBlock() || forceBlock == true)
 	{
 		cout << BlockCommunicate() << endl;
 		return;

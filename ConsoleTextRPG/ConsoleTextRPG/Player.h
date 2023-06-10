@@ -10,11 +10,14 @@ private:
 	int maxHealth;
 	int gold = 0;
 protected:
+	bool haveSpecialAttack;
 	void SetupHealth(int amount);
 	virtual string ActionCommunicate();
 	string BlockCommunicate() override;
 	virtual int BasicAttack();
 	virtual int PowerAttack();
+	virtual int SpecialAttack();
+	virtual void DoBeforeAction();
 public:
 	int MakeAction();
 	int GetHealth();

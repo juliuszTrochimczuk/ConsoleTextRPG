@@ -10,6 +10,8 @@ protected:
 	string ActionCommunicate() override;
 	int BasicAttack() override;
 	int PowerAttack() override;
+	int SpecialAttack() override;
+	void DoBeforeAction() override;
 public:
 	Mage();
 };

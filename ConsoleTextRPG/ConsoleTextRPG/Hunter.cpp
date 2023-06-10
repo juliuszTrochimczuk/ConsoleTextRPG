@@ -7,16 +7,25 @@ string Hunter::ActionCommunicate()
 
 int Hunter::BasicAttack()
 {
-    return Attack(8, 18);
+    return Attack(10, 14);
 }
 
 int Hunter::PowerAttack()
 {
-    return Attack(10, 14);
+    int damage = Attack(8, 20);
+    int armorShred = GameController::GenerateNumber(1, 100);
+    if (armorShred > 50)
+    {
+        cout << "Your arrow shred throw enemy arrmor\n";
+        damage *= 2;
+    }
+    return damage;
 }
 
 Hunter::Hunter()
 {
     SetupHealth(110);
     defensiveFactor = 62;
+    haveSpecialAttack = false;
+    forceBlock = false;
 }

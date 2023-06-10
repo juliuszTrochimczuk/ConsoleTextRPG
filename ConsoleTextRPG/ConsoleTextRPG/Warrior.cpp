@@ -18,5 +18,7 @@ int Warrior::PowerAttack()
 Warrior::Warrior()
 {
 	SetupHealth(125);
-	defensiveFactor = 56;
+	defensiveFactor = 52;
+	haveSpecialAttack = false;
+	forceBlock = false;
 }

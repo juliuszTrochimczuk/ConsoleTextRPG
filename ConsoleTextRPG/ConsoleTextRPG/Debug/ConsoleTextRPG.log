@@ -1,15 +1,4 @@
-﻿  ConsoleTextRPG.cpp
+﻿  Mage.cpp
 C:\Users\Juliusz Trochimczuk\ConsoleTextRPG\ConsoleTextRPG\ConsoleTextRPG\Character.h(1,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
 C:\Users\Juliusz Trochimczuk\ConsoleTextRPG\ConsoleTextRPG\ConsoleTextRPG\Character.h(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-  FeoData.cpp
-  Hunter.cpp
-C:\Users\Juliusz Trochimczuk\ConsoleTextRPG\ConsoleTextRPG\ConsoleTextRPG\Character.h(1,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-C:\Users\Juliusz Trochimczuk\ConsoleTextRPG\ConsoleTextRPG\ConsoleTextRPG\Character.h(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-  Mage.cpp
-C:\Users\Juliusz Trochimczuk\ConsoleTextRPG\ConsoleTextRPG\ConsoleTextRPG\Character.h(1,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-C:\Users\Juliusz Trochimczuk\ConsoleTextRPG\ConsoleTextRPG\ConsoleTextRPG\Character.h(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-  Warrior.cpp
-C:\Users\Juliusz Trochimczuk\ConsoleTextRPG\ConsoleTextRPG\ConsoleTextRPG\Character.h(1,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-C:\Users\Juliusz Trochimczuk\ConsoleTextRPG\ConsoleTextRPG\ConsoleTextRPG\Character.h(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-  Generating Code...
   ConsoleTextRPG.vcxproj -> C:\Users\Juliusz Trochimczuk\ConsoleTextRPG\ConsoleTextRPG\Debug\ConsoleTextRPG.exe

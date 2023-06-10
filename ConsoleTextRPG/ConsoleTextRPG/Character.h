@@ -12,6 +12,7 @@ private:
 protected:
 	int health;
 	int defensiveFactor;
+	bool forceBlock;
 	virtual string BlockCommunicate();
 public:
 	bool isDead;
