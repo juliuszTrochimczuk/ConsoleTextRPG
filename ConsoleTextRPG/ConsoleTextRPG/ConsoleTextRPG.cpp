@@ -60,22 +60,25 @@ void StartOfTheGame(Player &playerRef)
 
 int main()
 {
-   cout << "Hey Player! Welcome in magical world of Rivia. It's high fanatsy world with planty of stories, creaters and treasuer. But firstly you need to choose your character.\n";
-   cout << "1 - Warrior; 2 - Hunter; 3 - Mage\n";
-   int classChoice = GameController::HandleInputChoice(3);
-   if (classChoice == 1)
-   {
-       Warrior playerObject = Warrior();
-       StartOfTheGame(playerObject);
-   }
-   else if (classChoice == 2)
-   {
-       Hunter playerObject = Hunter();
-       StartOfTheGame(playerObject);
-   }
-   else if (classChoice == 3)
-   {
-       Mage playerObject = Mage();
-       StartOfTheGame(playerObject);
-   }   
+    GameController controller = GameController();
+    controller.SettupCampaign("");
+    cout << controller.GetCampaignText(1, 1) + "\n";
+    cout << "Hey Player! Welcome in magical world of Rivia. It's high fanatsy world with planty of stories, creaters and treasuer. But firstly you need to choose your character.\n";
+    cout << "1 - Warrior; 2 - Hunter; 3 - Mage\n";
+    int classChoice = GameController::HandleInputChoice(3);
+    if (classChoice == 1)
+    {
+        Warrior playerObject = Warrior();
+        StartOfTheGame(playerObject);
+    }
+    else if (classChoice == 2)
+    {
+        Hunter playerObject = Hunter();
+        StartOfTheGame(playerObject);
+    }
+    else if (classChoice == 3)
+    {
+        Mage playerObject = Mage();
+        StartOfTheGame(playerObject);
+    }   
 }
