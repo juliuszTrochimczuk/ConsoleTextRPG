@@ -1,7 +1,5 @@
 #include "GameController.h"
 
-extern vector<string> bountyCampaignTexts;
-
 int GameController::GenerateNumber(int minValue, int maxValue)
 {
 	random_device rd;
@@ -49,34 +47,4 @@ int GameController::HandleInputChoice(int maxOption)
 		}
 	}
 	return numericOption;
-}
-
-void GameController::SettupCampaign(string whichCampaign)
-{
-	fstream file;
-	file.open(whichCampaign);
-	if (file.is_open())
-	{
-		string lineOfText;
-		while (getline(file, lineOfText))
-		{
-			bountyCampaignTexts.push_back(lineOfText);
-		}
-		file.close();
-	}
-	else
-	{
-		cout << "I DID NOT FOUND THE FILE\n";
-		exit(0);
-	}
-}
-
-string GameController::GetCampaignText(int whichCampaign, int index)
-{
-	string textToReturn;
-	if (whichCampaign == 1)
-	{
-		textToReturn = bountyCampaignTexts[index];
-	}
-	return textToReturn;
 }

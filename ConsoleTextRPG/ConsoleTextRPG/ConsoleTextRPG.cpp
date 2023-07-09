@@ -6,6 +6,7 @@
 #include "Mage.h"
 #include "Player.h"
 #include "GameController.h"
+#include "StoryController.h"
 
 using namespace std;
 
@@ -60,9 +61,8 @@ void StartOfTheGame(Player &playerRef)
 
 int main()
 {
-    GameController controller = GameController();
-    controller.SettupCampaign("");
-    cout << controller.GetCampaignText(1, 1) + "\n";
+    StoryController::SettupCampaign("BountyCampaign.txt");
+    cout << StoryController::GetCampaignText(1) + "\n";
     cout << "Hey Player! Welcome in magical world of Rivia. It's high fanatsy world with planty of stories, creaters and treasuer. But firstly you need to choose your character.\n";
     cout << "1 - Warrior; 2 - Hunter; 3 - Mage\n";
     int classChoice = GameController::HandleInputChoice(3);

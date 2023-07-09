@@ -147,6 +147,7 @@
     <ClCompile Include="Hunter.cpp" />
     <ClCompile Include="Mage.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="StoryController.cpp" />
     <ClCompile Include="Warrior.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -156,6 +157,7 @@
     <ClInclude Include="Hunter.h" />
     <ClInclude Include="Mage.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="StoryController.h" />
     <ClInclude Include="Warrior.h" />
   </ItemGroup>
   <ItemGroup>
